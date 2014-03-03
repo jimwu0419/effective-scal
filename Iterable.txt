@@ -1,4 +1,4 @@
-cala> List(1,2,3,4)
+scala> List(1,2,3,4)
 res0: List[Int] = List(1, 2, 3, 4)
 
 scala> val a = List(1,2,3,4)
