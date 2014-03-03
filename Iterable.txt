@@ -1,0 +1,25 @@
+cala> List(1,2,3,4)
+res0: List[Int] = List(1, 2, 3, 4)
+
+scala> val a = List(1,2,3,4)
+a: List[Int] = List(1, 2, 3, 4)
+
+scala> val b = List(5,6,7,8)
+b: List[Int] = List(5, 6, 7, 8)
+
+scala> a zip b
+res1: List[(Int, Int)] = List((1,5), (2,6), (3,7), (4,8))
+
+scala> val c = List(5,6)
+c: List[Int] = List(5, 6)
+
+scala> c zip a
+res2: List[(Int, Int)] = List((5,1), (6,2))
+
+scala> a zipAll(c, 8, 9)
+res5: List[(Int, Int)] = List((1,5), (2,6), (3,9), (4,9))
+
+scala> a zipWithIndex
+res6: List[(Int, Int)] = List((1,0), (2,1), (3,2), (4,3))
+
+
