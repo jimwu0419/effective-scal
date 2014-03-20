@@ -1,0 +1,33 @@
+scala> Seq.concat(List(1,2), List(3,4))
+res22: Seq[Int] = List(1, 2, 3, 4)
+
+scala> Seq.concat(List("a", "b"), List(1))
+res31: Seq[Any] = List(a, b, 1)
+
+
+// S.fill(n){e} => A sequence of length n where each element is computed by expression e.
+scala> List.fill(2,1)(10)
+res49: List[List[Int]] = List(List(10), List(10))
+
+scala>  List.fill(3,1)(1+2)
+res79: List[List[Int]] = List(List(3), List(3), List(3))
+
+ 
+// S.tabulate(n){f} => A sequence of length n where the element at each index i is computed by f(i).
+scala> Seq.tabulate(5)("index" + _)
+res59: Seq[String] = List(index0, index1, index2, index3, index4)
+
+scala> Seq.tabulate(2,3)((i, j) => i + "A" + j + "B")
+res66: Seq[Seq[String]] = List(List(0A0B, 0A1B, 0A2B), List(1A0B, 1A1B, 1A2B))
+
+
+// S.range(start, end) => The sequence of integers start … end-1.
+scala> Seq.range(1,5)
+res67: Seq[Int] = List(1, 2, 3, 4)
+
+scala> Seq.iterate("a", 5)(i => i+"a")
+res73: Seq[String] = List(a, aa, aaa, aaaa, aaaaa)
+
+//S.iterate(x, n)(f) => The sequence of length n with elements x, f(x), f(f(x))
+scala> Seq.iterate(0, 5)(i => i+5)
+res77: Seq[Int] = List(0, 5, 10, 15, 20
