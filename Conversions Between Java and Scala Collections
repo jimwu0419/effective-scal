@@ -1,0 +1,6 @@
+
+import scala.collection.JavaConverters._
+
+List("a","b","c").asJava
+// java.util.List[String] = [a, b, c]
+
